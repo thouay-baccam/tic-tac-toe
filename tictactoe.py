@@ -93,7 +93,7 @@ def desactiver_boutons():
 
 # Création de la fenêtre principale
 fenetre = Tk()
-fenetre.title("Morpion")
+fenetre.title("Tic-Tac-Toe")
 
 # Configuration des couleurs de fond et de texte, taille, et résistance au redimensionnement
 couleur_fond_mode_sombre = "#121212"
