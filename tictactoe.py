@@ -30,7 +30,7 @@ joueur = random.choice(joueurs)
 def joueur_suivant():
     global joueur
     joueur = joueurs[1] if joueur == joueurs[0] else joueurs[0]
-    etiquette.config(text=f"À ton tour, {joueur}")
+    etiquette.config(text=f"À ton tour, Monsieur {joueur}")
 
 def mettre_a_jour_interface():
     fenetre.update()
@@ -61,7 +61,7 @@ def espaces_vides():
 
 def fin_de_partie():
     if verifier_gagnant() is True:
-        etiquette.config(text=f"{joueur} a gagné!")
+        etiquette.config(text=f"Monsieur {joueur} a gagné!")
     else:
         etiquette.config(text="Match nul!")
 
@@ -83,7 +83,7 @@ def nouvelle_partie():
     global joueur
     activer_boutons()
     joueur = random.choice(joueurs)
-    etiquette.config(text=f"Tu commences, {joueur}")
+    etiquette.config(text=f"Tu commences, Monsieur {joueur}")
     reinitialiser_plateau()
 
 def reinitialiser_plateau():
@@ -106,7 +106,7 @@ def activer_boutons():
 # *******************************
 
 # Création de l'étiquette pour afficher les messages du jeu
-etiquette = Label(text=f"Tu commences, {joueur}", font=('Arial', 18), bg=couleur_fond_mode_sombre, fg=couleur_texte_mode_sombre)
+etiquette = Label(text=f"Tu commences, Monsieur {joueur}", font=('Arial', 18), bg=couleur_fond_mode_sombre, fg=couleur_texte_mode_sombre)
 etiquette.pack(side="top", pady=10)
 
 # Création du cadre pour contenir les boutons du plateau
